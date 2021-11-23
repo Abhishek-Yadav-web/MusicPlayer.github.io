@@ -1,0 +1,123 @@
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f6f6f6
+}
+
+
+.Music-Player{
+    width:350px;
+    height: 525px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.Music-Player > .musicName{
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.Music-Player > .singerName{
+    font-size: 1;
+    font-weight: 200;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.Music-Player > .imgBx{
+    width: 80%;
+    height: 250px;
+    background: #ccc;
+    border-radius: 50%;
+    border:10px solid  #f6f6f6;
+    box-shadow:inset 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2), 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+
+.Music-Player.active > .imgBx{
+    animation: playing 5s linear infinite;
+}
+
+@keyframes playing {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.Music-Player > .imgBx > img{
+    width: 100%;height: 100%;
+    object-fit: cover;
+}
+
+.Music-Player > .controller{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Music-Player > .controller > a{
+    font-size: 2em;
+}
+
+.Music-Player > .controller > .contBtn{
+    margin: 0 15px;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.Music-Player > .controller > .contBtn::before{
+    content: "\f04b";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased; font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #fff;
+}
+
+.Music-Player.active > .controller > .contBtn::before{
+    content: "\f04c";
+}

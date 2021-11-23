@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fav-icon -->
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Abhishek-Yadav-web/--template.github.io/7f7021de60c1cfcad415d554eda3092a97f3407a/--template/img/favicon.png" type="image/x-icon">
+    <!-- Tittle -->
+    <title>Oliva | Music Player</title>
+    <!-- Css-file -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- play & pause Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Music Player -->
+    <div class="Music-Player">
+        <h1 class="musicName" id="musicName">ddu_ddu.du</h1>
+        <h3 class="singerName" id="singerName">Blackpink</h3>
+        <div class="imgBx">
+            <img src="./img&music/Blackpink.jpg" alt="Album" title="Fly To My Room" id='album'>
+        </div>
+        <div class="controller">
+            <a class="prev" id="prev"><ion-icon name="play-back"></ion-icon></a>
+            <!-- <a class="play" id="play"><ion-icon name="play-circle"></ion-icon></a> -->
+            <div class="contBtn" id="conBtn"></div>
+            <!-- for pause <ion-icon name="pause-circle"></ion-icon> -->
+            <a class="next" id="next"><ion-icon name="play-forward"></ion-icon></a>
+        </div>
+        <audio src="./img&music/Blackpink.mp3" id="music" hidden></audio>
+    </div>
+
+
+    <!-- Icon-Script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Api -->
+    <script src="./js/api/apiScript.js"></script>
+    <!-- Js Link -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
